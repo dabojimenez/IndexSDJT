@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORUSCURSO", "ORUSCURSO.csproj", "{ABBE70D2-3E38-4090-82EC-9A05F7C73C5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABBE70D2-3E38-4090-82EC-9A05F7C73C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBE70D2-3E38-4090-82EC-9A05F7C73C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBE70D2-3E38-4090-82EC-9A05F7C73C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBE70D2-3E38-4090-82EC-9A05F7C73C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E64F60D2-54A6-489A-9EE8-985D49D2ADD9}
+	EndGlobalSection
+EndGlobal

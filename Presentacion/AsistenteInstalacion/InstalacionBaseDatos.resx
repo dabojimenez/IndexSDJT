@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="rtxCrearUsuarioBD.Text" xml:space="preserve">
+    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
+GO
+Use BASEADA;
+GO
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'ada369')
+BEGIN CREATE USER [ada369] FOR LOGIN [ada369] EXEC sp_addrolemember N'db_owner'.N'ada369' EXEC master..sp_addsrvrolemember@loginame = N'ada369'.@rolename = N'sysadmin'
+END;
+GO</value>
+  </data>
+  <data name="rtxCrearProcedimiento.Text" xml:space="preserve">
+    <value>USE [master]
+
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [ORUSBD].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [ORUSBD] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [ORUSBD] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [ORUSBD] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [ORUSBD] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [ORUSBD] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [ORUSBD] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [ORUSBD] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [ORUSBD] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [ORUSBD] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [ORUSBD] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [ORUSBD] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [ORUSBD] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [ORUSBD] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [ORUSBD] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [ORUSBD] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [ORUSBD] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [ORUSBD] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [ORUSBD] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [ORUSBD] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [ORUSBD] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [ORUSBD] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [ORUSBD] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [ORUSBD] SET RECOVERY FULL 
+GO
+ALTER DATABASE [ORUSBD] SET  MULTI_USER 
+GO
+ALTER DATABASE [ORUSBD] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [ORUSBD] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [ORUSBD] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [ORUSBD] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [ORUSBD] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [ORUSBD] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'ORUSBD', N'ON'
+GO
+ALTER DATABASE [ORUSBD] SET QUERY_STORE = OFF
+GO
+USE [ORUSBD]
+GO
+/****** Object:  Table [dbo].[Asistencias]    Script Date: 11/07/2022 10:14:41 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Asistencias](
+	[Id_asistencia] [int] IDENTITY(1,1) NOT NULL,
+	[Id_personal] [int] NOT NULL,
+	[Fecha_entrada] [datetime] NULL,
+	[Fecha_salida] [datetime] NULL,
+	[Estado] [varchar](50) NULL,
+	[Horas] [numeric](16, 2) NULL,
+	[Observacion] [varchar](max) NULL,
+ CONSTRAINT [PK_Asistencias] PRIMARY KEY CLUSTERED 
+(
+	[Id_asistencia] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Cargo]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Cargo](
+	[Id_Cargo] [int] IDENTITY(1,1) NOT NULL,
+	[Cargo] [varchar](max) NOT NULL,
+	[SueldoPorHora] [numeric](18, 2) NOT NULL,
+ CONSTRAINT [PK_Cargo] PRIMARY KEY CLUSTERED 
+(
+	[Id_Cargo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[CopiasBd]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CopiasBd](
+	[IdCopias] [int] IDENTITY(1,1) NOT NULL,
+	[Ruta] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_CopiasBd] PRIMARY KEY CLUSTERED 
+(
+	[IdCopias] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Modulos]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Modulos](
+	[IdModulo] [int] IDENTITY(1,1) NOT NULL,
+	[Modulo] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Modulos] PRIMARY KEY CLUSTERED 
+(
+	[IdModulo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Permisos]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Permisos](
+	[IdPermisos] [int] IDENTITY(1,1) NOT NULL,
+	[IdModulo] [int] NOT NULL,
+	[IdUsuario] [int] NOT NULL,
+ CONSTRAINT [PK_Permisos] PRIMARY KEY CLUSTERED 
+(
+	[IdPermisos] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Personal]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Personal](
+	[Id_personal] [int] IDENTITY(1,1) NOT NULL,
+	[Nombres] [varchar](max) NOT NULL,
+	[Identificacion] [varchar](max) NOT NULL,
+	[Pais] [varchar](max) NOT NULL,
+	[Id_Cargo] [int] NOT NULL,
+	[SueldoPorHora] [numeric](18, 2) NOT NULL,
+	[Estado] [varchar](50) NOT NULL,
+	[Codigo] [varchar](255) NOT NULL,
+ CONSTRAINT [PK_Personal] PRIMARY KEY CLUSTERED 
+(
+	[Id_personal] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuarios](
+	[IdUsuario] [int] IDENTITY(1,1) NOT NULL,
+	[NombresApellidos] [varchar](50) NOT NULL,
+	[Login] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[Icono] [image] NOT NULL,
+	[Estado] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[IdUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Asistencias]  WITH CHECK ADD  CONSTRAINT [FK_Asistencias_Personal] FOREIGN KEY([Id_personal])
+REFERENCES [dbo].[Personal] ([Id_personal])
+GO
+ALTER TABLE [dbo].[Asistencias] CHECK CONSTRAINT [FK_Asistencias_Personal]
+GO
+ALTER TABLE [dbo].[Permisos]  WITH CHECK ADD  CONSTRAINT [FK_Permisos_Modulos] FOREIGN KEY([IdModulo])
+REFERENCES [dbo].[Modulos] ([IdModulo])
+GO
+ALTER TABLE [dbo].[Permisos] CHECK CONSTRAINT [FK_Permisos_Modulos]
+GO
+ALTER TABLE [dbo].[Permisos]  WITH CHECK ADD  CONSTRAINT [FK_Permisos_Usuarios] FOREIGN KEY([IdUsuario])
+REFERENCES [dbo].[Usuarios] ([IdUsuario])
+GO
+ALTER TABLE [dbo].[Permisos] CHECK CONSTRAINT [FK_Permisos_Usuarios]
+GO
+ALTER TABLE [dbo].[Personal]  WITH CHECK ADD  CONSTRAINT [FK_Personal_Cargo] FOREIGN KEY([Id_Cargo])
+REFERENCES [dbo].[Cargo] ([Id_Cargo])
+GO
+ALTER TABLE [dbo].[Personal] CHECK CONSTRAINT [FK_Personal_Cargo]
+GO
+/****** Object:  StoredProcedure [dbo].[BUSCAR_CARGO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[BUSCAR_CARGO]
+@Buscador VARCHAR(50)
+AS
+--AS [Sueldo por Hora], cambiamos el nombre de la columna SueldoPorHora
+SELECT Id_Cargo, Cargo, SueldoPorHora AS [Sueldo por Hora] FROM Cargo WHERE Cargo LIKE '%'+@Buscador+'%'
+GO
+/****** Object:  StoredProcedure [dbo].[BUSCAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[BUSCAR_PERSONAL]
+@Desde int,
+@Hasta int,
+@Buscador VARCHAR(50)
+
+AS
+SET NOCOUNT ON;
+SELECT 
+Id_personal, Nombres, Identificacion, SueldoPorHora, Cargo, Id_Cargo, Estado, Codigo, Pais
+FROM
+(SELECT Id_personal, Nombres, Identificacion, Pais, Personal.SueldoPorHora, Cargo.Cargo, Personal.Id_Cargo, Estado, Codigo, 
+ROW_NUMBER() OVER(ORDER BY Id_personal) 'Numero_de_fila'
+FROM Personal
+INNER JOIN Cargo ON Cargo.Id_Cargo=Personal.Id_Cargo) AS PAGINADO
+WHERE(PAGINADO.Numero_de_fila &gt;= @Desde) AND (PAGINADO.Numero_de_fila &lt;= @Hasta)
+AND (Nombres+Identificacion LIKE '%'+@Buscador+'%')
+GO
+/****** Object:  StoredProcedure [dbo].[BUSCARASISTENCIASID]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[BUSCARASISTENCIASID]
+@IdPersonal int
+AS
+SELECT * FROM Asistencias
+WHERE Id_personal=@IdPersonal AND ASISTENCIAS.Estado='ENTRADA'
+GO
+/****** Object:  StoredProcedure [dbo].[BUSCARPERSONALIDENTIDAD]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[BUSCARPERSONALIDENTIDAD]
+@BUSCADOR VARCHAR(50)
+AS
+SELECT * FROM Personal WHERE Identificacion=@BUSCADOR
+GO
+/****** Object:  StoredProcedure [dbo].[CONFIRMARSALIDA]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[CONFIRMARSALIDA]
+@Id_personal as int,
+@Fecha_salida DATETIME,
+@Horas as NUMERIC(18,2)
+AS
+UPDATE Asistencias SET
+Fecha_salida = @Fecha_salida,
+Horas = @Horas,
+Estado = 'SALIDA'
+WHERE Id_personal = @Id_personal AND Estado='ENTRADA'
+GO
+/****** Object:  StoredProcedure [dbo].[EDITAR_CARGO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EDITAR_CARGO]
+@Id_Cargo int,
+@Cargo varchar(MAX),
+@SueldoPorHora numeric(18, 2)
+
+AS
+IF EXISTS(SELECT Cargo FROM Cargo WHERE Cargo=@Cargo AND Id_Cargo&lt;&gt;@Id_Cargo)
+RAISERROR ('Ya existe un Cargo con ese Nombre, Ingrese de Nuevo',16,1)
+ELSE
+UPDATE Cargo SET Cargo=@Cargo, SueldoPorHora=@SueldoPorHora WHERE Id_Cargo=@Id_Cargo
+GO
+/****** Object:  StoredProcedure [dbo].[Editar_COPIAS_BD]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[Editar_COPIAS_BD]
+@Ruta VARCHAR(MAX)
+AS
+UPDATE CopiasBd SET Ruta = @Ruta
+GO
+/****** Object:  StoredProcedure [dbo].[EDITAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EDITAR_PERSONAL]
+@Id_personal int,
+@Nombres varchar(MAX),
+@Identificacion varchar(MAX),
+@Pais varchar(MAX),
+@Id_Cargo int,
+@SueldoPorHora numeric(18,2)
+AS
+IF EXISTS(SELECT Identificacion FROM Personal WHERE Identificacion=@Identificacion AND Id_personal &lt;&gt; @Id_personal)
+RAISERROR ('Ya existe un registro con esta Identificación',16,1)
+ELSE
+UPDATE Personal SET
+Nombres=@Nombres, Identificacion=@Identificacion, Pais=@Pais, Id_Cargo=@Id_Cargo, SueldoPorHora=@SueldoPorHora
+WHERE Id_personal=@Id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[ELIMINAR_PERMISOS]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[ELIMINAR_PERMISOS]
+@IdUsuario AS INT
+AS
+	DELETE FROM Permisos WHERE IdUsuario=@IdUsuario
+GO
+/****** Object:  StoredProcedure [dbo].[ELIMINAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ELIMINAR_PERSONAL]
+@Id_personal int
+AS
+UPDATE Personal set Estado = 'ELIMINADO' WHERE Id_personal=@Id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_ASISTENCIAS]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[INSERTAR_ASISTENCIAS]
+@Id_persoanl int,
+@Fecha_entrada DATETIME,
+@Fecha_salida DATETIME,
+@Estado VARCHAR(50),
+@Horas numeric(16,2),
+@Observacion VARCHAR(MAX)
+AS
+INSERT INTO Asistencias
+VALUES(@Id_persoanl, @Fecha_entrada, @Fecha_salida, @Estado, @Horas, @Observacion)
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_CARGO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[INSERTAR_CARGO]
+@Cargo varchar(MAX),
+@SueldoPorHora numeric(18, 2)
+
+AS
+IF EXISTS(SELECT Cargo FROM Cargo WHERE Cargo=@Cargo)
+RAISERROR ('Ya existe un Cargo con ese Nombre, Ingrese de Nuevo',16,1)
+ELSE
+INSERT INTO Cargo VALUES (@Cargo, @SueldoPorHora)
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_COPIAS_BD]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[INSERTAR_COPIAS_BD]
+--PARAMETRO POR DEFAULT, PARA LO QUE DECLARAMOS UNA VARIABLE
+AS
+DECLARE @Ruta VARCHAR(MAX)
+--LE DAMOS UN VALOR A LA VARIABLE
+SET @Ruta = '-'
+INSERT INTO CopiasBd
+VALUES(@Ruta)
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_MODULO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[INSERTAR_MODULO]
+@Modulo AS VARCHAR(MAX)
+AS
+INSERT INTO Modulos VALUES(@Modulo)
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_PERMISOS]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[INSERTAR_PERMISOS]
+@IdModulo INT,
+@IdUsuario INT
+AS
+INSERT INTO Permisos
+	VALUES (@IdModulo, @IdUsuario)
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[INSERTAR_PERSONAL]
+@Nombres AS VARCHAR(MAX),
+@Identificacion AS VARCHAR(MAX),
+@Pais AS VARCHAR(MAX),
+@Id_Cargo INT,
+@SueldoPorHora NUMERIC(18, 2)
+AS
+DECLARE @Estado VARCHAR(50)
+--no se recomienda ingresar vacios
+DECLARE @Codigo VARCHAR(255)
+--como aun no existe el Id_Personal, declararemos el Id_personal, solo lo declarariamos, este no se pedira en la interface del procedimeinto
+DECLARE @Id_personal int
+SET @Estado='ACTIVO'
+--estamos indicando un valor y ya no ingresara vacio
+SET @Codigo='-'
+IF EXISTS(SELECT Identificacion FROM Personal WHERE Identificacion=@Identificacion)
+RAISERROR('Ya existe un registro con esa Identificación', 16,1)
+ELSE
+INSERT INTO Personal
+VALUES(@Nombres,
+@Identificacion,
+@Pais,
+@Id_Cargo,
+@SueldoPorHora,
+@Estado,
+@Codigo)
+--Lo que hace esta funcion SCOPE_IDENTITY, es capturar el ID, que se acaba de ingresar
+SELECT @Id_personal=SCOPE_IDENTITY()
+--actualizamos la tabla solo a este campo, ya que se lo mandaraun valor de '-'
+UPDATE Personal set Codigo=@Id_personal WHERE Id_personal=@Id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[INSERTAR_USUARIO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[INSERTAR_USUARIO]
+@NombresApellidos varchar (50),
+@Login varchar (50),
+@Password varchar (50),
+@Icono image,
+@Estado varchar (50)
+AS
+--VALIDAMOS SI EXISTE YA UN SUAURIO REGISTRADO
+IF EXISTS(SELECT Login FROM Usuarios WHERE Login=@Login)
+	RAISERROR ('YA EXISTE UN REGISTRO CON ESE USUARIO, POR FAVOR INGRESE DE NUEVO', 16, 1)
+ELSE
+	INSERT INTO Usuarios
+		VALUES (@NombresApellidos, @Login, @Password, @Icono, @Estado)
+GO
+/****** Object:  StoredProcedure [dbo].[MOSTRAR_ASISTENCIAS_DIARIAS]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[MOSTRAR_ASISTENCIAS_DIARIAS]
+@DESDE AS DATE,
+@HASTA AS DATE,
+@SEMANA AS INT
+AS
+--SE REALIZARA UN CALCULO PARA SABER CUANTAS HORAS SE HAN LABORADO
+--CONVERTIREMOS (CONVERT), A UN TIPO D EDATO FECHA (DATE), A LA FECHA DE SALIDA, YA QUE ESTA ES DE TIPO DateTime, y me muestra hasta los segundos, PERO SOLO NECESITAMOS LA FECHA
+SELECT Personal.Nombres, Personal.Identificacion, CONVERT(date, Fecha_salida) AS Fecha,
+--SUMAMOS LAS HORAS
+SUM(Horas) AS Horas, @DESDE AS Desde, @HASTA AS Hasta,
+--Con (DATENAME), OBTENEMOS EL NOMBRE DEL TIPO DE DATO, YA QUE NECESITAMOS SABER QUE DIA ESTAMOS REALIZANDO EL REPORTE, LUNES, MARTES, MIEROCLES, ETC
+--(WIIKDAY), SACAMOS EL DIA DE LA SEMANA, Y EL SEGUNDO PARAMETRO ES A LA FECHA QUE LE SACARA EL DATO
+DATENAME(WEEKDAY, Fecha_salida) AS Dia, @SEMANA AS Semana, Personal.SueldoPorHora
+FROM Asistencias
+INNER JOIN Personal ON Asistencias.Id_personal = Personal.Id_personal
+WHERE Fecha_salida &gt;= @DESDE AND Fecha_salida &lt;= @HASTA
+--COMO USAMOS EL METODO (SUM), DEBEMOS SI O SI AGRUPAR LOS DATOS
+GROUP BY Personal.Nombres, Personal.Identificacion, Fecha_salida, Personal.SueldoPorHora
+--ORDENAMOS LOS DATOS, DE FORMA ASCENDENTE, DE MENOR A MAYOR
+ORDER BY CONVERT(date, Fecha_salida) ASC
+GO
+/****** Object:  StoredProcedure [dbo].[MOSTRAR_PERMISOS]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[MOSTRAR_PERMISOS]
+@IdUsuario INT
+AS
+SELECT Permisos.IdModulo, Modulos.Modulo FROM Permisos INNER JOIN Modulos ON Modulos.IdModulo=Permisos.IdModulo WHERE IdUsuario=@IdUsuario
+GO
+/****** Object:  StoredProcedure [dbo].[MOSTRAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[MOSTRAR_PERSONAL]
+--con esto vamos a paginar nuestros registros
+@Desde int,
+@Hasta int
+AS
+--usaremos SET NOCOUNT ON, para enumerar, los registros que tengamos en nuetsra tabla
+SET NOCOUNT ON;
+--Traeremos todos los cmapos que este en el selec dentro del parentesis
+SELECT 
+Id_personal, Nombres, Identificacion, Pais, SueldoPorHora, Cargo, Id_Cargo, Estado, Codigo 
+FROM
+(SELECT Id_personal, Nombres, Identificacion, Pais, Personal.SueldoPorHora, Cargo.Cargo, Personal.Id_Cargo, Estado, Codigo,
+--pasamos a numerar las filas, siendo este un campo adicional llamado ( Numero_de_fila )
+ROW_NUMBER() OVER(ORDER BY Id_personal) 'Numero_de_fila'
+FROM Personal
+INNER JOIN Cargo ON Cargo.Id_Cargo=Personal.Id_Cargo) AS PAGINADO--LO LLAMAREMOS PAGINADO
+WHERE(PAGINADO.Numero_de_fila &gt;= @Desde) AND (PAGINADO.Numero_de_fila &lt;= @Hasta)
+GO
+/****** Object:  StoredProcedure [dbo].[OBTENER_ID_USUARIO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[OBTENER_ID_USUARIO]
+@Login as varchar (50)
+AS
+SELECT IdUsuario FROM Usuarios WHERE Login=@Login
+GO
+/****** Object:  StoredProcedure [dbo].[RESTAURAR_PERSONAL]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[RESTAURAR_PERSONAL]
+@IdPersonal int
+AS
+UPDATE Personal set Estado = 'ACTIVO' WHERE Id_personal = @IdPersonal
+GO
+/****** Object:  StoredProcedure [dbo].[VALIDAR_USUARIO]    Script Date: 11/07/2022 10:14:42 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[VALIDAR_USUARIO]
+@Password as varchar (50),
+@Login AS VARCHAR (50)
+AS
+SELECT * FROM Usuarios WHERE Password = @Password AND Login = @Login AND Estado = 'ACTIVO'
+GO
+USE [master]
+GO
+ALTER DATABASE [ORUSBD] SET  READ_WRITE 
+GO</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 17</value>
+  </metadata>
+  <metadata name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>191, 17</value>
+  </metadata>
+  <metadata name="TimerCRARINI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>278, 17</value>
+  </metadata>
+</root>
